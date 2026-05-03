@@ -42,7 +42,7 @@ jobs:
     if: >-
       ${{ !github.event.repository.is_template
           && needs.get_current_step.outputs.current_step == 5
-          && github.ref_name == 'v1.0.0' }}
+          }} # && github.ref_name == 'v1.0.0' }}
 
     # We'll run Ubuntu for performance instead of Mac or Windows.
     runs-on: ubuntu-latest
